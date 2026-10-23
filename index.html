@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="个人主页 · 研究兴趣、学术成果与成长经历。">
+  <meta name="theme-color" content="#ffffff">
+  <title>个人主页 · Personal Homepage</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script src="profile-data.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body id="top">
+  <a class="skip-link" href="#about">跳转到正文</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="#top" aria-label="返回主页顶部">Homepage</a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav">Menu <span aria-hidden="true">☰</span></button>
+      <nav id="main-nav" aria-label="主页目录">
+        <a href="#about" class="active" aria-current="location">About Me</a>
+        <a href="#news">News</a>
+        <a href="#publications">Publications</a>
+        <a href="#honors">Honors and Awards</a>
+        <a href="#education">Educations</a>
+        <a href="#experience">Internships</a>
+      </nav>
+    </div>
+  </header>
+  <div class="page-layout">
+    <aside class="profile-sidebar" aria-label="个人信息">
+      <div class="portrait-frame">
+        <img id="portrait" alt="个人照片" hidden>
+        <div id="portrait-placeholder" class="portrait-placeholder">
+          <svg viewBox="0 0 180 180" role="img" aria-label="头像待填写"><circle cx="90" cy="66" r="28"/><path d="M35 164c0-38 22-61 55-61s55 23 55 61"/></svg>
+          <span>[个人头像]</span>
+        </div>
+      </div>
+      <div class="profile-identity">
+        <h1 id="profile-name">[你的姓名]</h1>
+        <p id="profile-english" class="english-name" hidden></p>
+        <div class="identity-lines"><p id="profile-affiliation">[学校 / 所在机构]</p><p id="profile-role">[你的身份 / 职位]</p></div>
+        <div class="contact-lines"><p id="profile-location"></p><p id="profile-email"></p></div>
+        <div id="profile-links" class="profile-links"></div>
+      </div>
+    </aside>
+    <main id="main-content">
+      <section id="about" class="content-section about-section" aria-label="About Me">
+        <div id="bio" class="bio-copy"></div>
+        <div class="research-interests"><strong>Research Interests:</strong> <span id="interests"></span></div>
+      </section>
+      <section id="news" class="content-section" aria-labelledby="news-title">
+        <h2 id="news-title"><span aria-hidden="true">🔥</span> News</h2>
+        <div id="news-content"></div>
+      </section>
+      <section id="publications" class="content-section" aria-labelledby="publications-title">
+        <h2 id="publications-title"><span aria-hidden="true">📝</span> Publications</h2>
+        <div id="publications-content"></div>
+      </section>
+      <section id="honors" class="content-section" aria-labelledby="honors-title">
+        <h2 id="honors-title"><span aria-hidden="true">🎖</span> Honors and Awards</h2>
+        <div id="honors-content"></div>
+      </section>
+      <section id="education" class="content-section" aria-labelledby="education-title">
+        <h2 id="education-title"><span aria-hidden="true">📖</span> Educations</h2>
+        <div id="education-content"></div>
+      </section>
+      <section id="experience" class="content-section" aria-labelledby="experience-title">
+        <h2 id="experience-title"><span aria-hidden="true">💻</span> Internships</h2>
+        <div id="experience-content"></div>
+      </section>
+      <footer class="page-footer"><span id="footer-name">Personal Homepage</span><a href="#top">Back to top ↑</a></footer>
+    </main>
+  </div>
+  <noscript><p class="noscript">请启用浏览器 JavaScript 以显示个人主页内容。</p></noscript>
+</body>
+</html>
